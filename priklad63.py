@@ -5,6 +5,7 @@ class Polygon:
     def __init__(self):
         self.__field = None
         self.__area = None
+        
     # Splits the lines in the input file in order to get the needed coordinates
     # Counts the polygon area from the coordinates
     def polygon_area(self):
@@ -22,6 +23,7 @@ class Polygon:
             else:
                 area += (x[i]*(y[i+1]-y[i-1]))/2
         self.__total_area = abs(area)
+        
     # Checks if the given coordinates are in clockwise order
     # if not --> sorts them to be in clockwise order
     def sort_clockwise(self):
@@ -47,6 +49,7 @@ class Polygon:
                     tmp = self.__field[idx_1]
                     self.__field[idx_1] = self.__field[idx_2]
                     self.__field[idx_2] = tmp
+                    
     # Loads and varifies the input data
     def load(self,adress):
         try:
@@ -62,6 +65,7 @@ class Polygon:
             sys.exit ("An error occured while reading the input file.")
         except:
             sys.exit ("Something went wrong.")
+            
     # Prints the area of the polygon in terminal
     def print(self):
         print(f"The area of the polygon is {self.__total_area}")
