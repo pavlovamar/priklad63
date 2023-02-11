@@ -44,8 +44,6 @@ class Polygon:
                     tmp = self.__field[idx_1]
                     self.__field[idx_1] = self.__field[idx_2]
                     self.__field[idx_2] = tmp
-        print(angle)
-        print(coordinates)
     def load(self,adress):
         try:
             with open (adress, 'r', encoding = "utf-8") as input:
